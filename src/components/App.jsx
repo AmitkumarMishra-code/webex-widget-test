@@ -15,13 +15,18 @@ export default function App() {
       let data = await response.json()
       console.log(data)
       setAccessToken(data.access_token)
-      setGettingAccessToken(false)
     }
     catch (error) {
       console.log(error.message)
       setGettingAccessToken(false)
     }
   }
+
+  useEffect(() => {
+    if(accessToken){
+      setGettingAccessToken(false)
+    }
+  },[accessToken])
 
   useEffect(() => {
     if (window.location.href.includes('code')) {
