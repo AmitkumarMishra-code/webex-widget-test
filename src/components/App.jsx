@@ -11,7 +11,7 @@ export default function App() {
   const getAccessToken = async (code) => {
     setGettingAccessToken(true)
     try {
-      let response = await fetch('https://webexapis.com/v1/access_token?client_id=Cb2a4b4ca57c520f5fbed7620d856b5e12f05b3b49a72d1272f60cc36742930de&grant_type=authorization_code&redirect_uri=http%3A%2F%2F127.0.0.1%3A3001%2F&scope=spark%3Aall%20spark%3Akms&client_secret=7b591c856f211ebdaffb50211326b7e8c741e8e869d2be670a40f424f3eb498f&code=' + code)
+      let response = await fetch('https://webexapis.com/v1/access_token?client_id=Cb2a4b4ca57c520f5fbed7620d856b5e12f05b3b49a72d1272f60cc36742930de&grant_type=authorization_code&redirect_uri=https%3A%2F%2Fadoring-kare-e9221a.netlify.app%2F&scope=spark%3Aall%20spark%3Akms&client_secret=7b591c856f211ebdaffb50211326b7e8c741e8e869d2be670a40f424f3eb498f&code=' + code)
       let data = await response.json()
       console.log(data)
       setAccessToken(data.accessToken)
@@ -47,7 +47,7 @@ export default function App() {
     <div>
       {
         !gettingAccessToken && !accessToken &&
-        <a href='https://webexapis.com/v1/authorize?client_id=Cb2a4b4ca57c520f5fbed7620d856b5e12f05b3b49a72d1272f60cc36742930de&response_type=code&redirect_uri=http%3A%2F%2F127.0.0.1%3A3001%2F&scope=spark%3Aall%20spark%3Akms&state=vim_is_hell'>Click to get auth code</a>
+        <a href='https://webexapis.com/v1/authorize?client_id=Cb2a4b4ca57c520f5fbed7620d856b5e12f05b3b49a72d1272f60cc36742930de&response_type=code&redirect_uri=https%3A%2F%2Fadoring-kare-e9221a.netlify.app%2F&scope=spark%3Aall%20spark%3Akms&state=vim_is_hell'>Click to get auth code</a>
       }
       {
         !gettingAccessToken && accessToken &&
