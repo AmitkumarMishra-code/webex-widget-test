@@ -4,7 +4,6 @@ import '@webex/widget-space/src/momentum.scss';
 import { useEffect, useState } from 'react';
 
 export default function App() {
-  const [authCode, setAuthCode] = useState(null)
   const [gettingAccessToken, setGettingAccessToken] = useState(false)
   const [accessToken, setAccessToken] = useState(null)
 
