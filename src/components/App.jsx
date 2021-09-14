@@ -24,6 +24,7 @@ export default function App() {
 
   useEffect(() => {
     if(accessToken){
+      console.log(accessToken)
       setGettingAccessToken(false)
     }
   },[accessToken])
