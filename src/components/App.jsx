@@ -54,9 +54,11 @@ export default function App() {
   return (
     <div>
       {
-        !gettingAccessToken && !accessToken ?
+        !gettingAccessToken && !accessToken &&
           <a href='https://webexapis.com/v1/authorize?client_id=Cb2a4b4ca57c520f5fbed7620d856b5e12f05b3b49a72d1272f60cc36742930de&response_type=code&redirect_uri=https%3A%2F%2Fadoring-kare-e9221a.netlify.app%2F&scope=spark%3Aall%20spark%3Akms&state=vim_is_hell'>Click to get auth code</a>
-          :
+      }
+      {
+        accessToken &&
           <SpaceWidget {...spaceWidgetProps} />
       }
     </div>
