@@ -39,7 +39,7 @@ export default function App() {
     activities: {
       files: false,
       meet: true,
-      message: false,
+      message: true,
       people: true
     },
     initialActivity: 'meet'
